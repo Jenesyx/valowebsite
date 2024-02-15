@@ -29,7 +29,7 @@ nav {
 .header {
     z-index: 9999999999999;
     position: fixed;
-    width: 100%;
+    width: 79%;
     height: 10%;
     display: flex;
     font-size: 15px;
@@ -40,45 +40,55 @@ nav {
 }
 
 .header img {
-    padding: 0 10px 0 0;
+    padding: 0 10px 0 0; 
     width: 24%;
 }
 
 .left {
-    padding: 12px 0;
+    padding: 7px 0;
     width: 60%;
     height: 100%;
 }
 
+.left ul {
+    justify-content: left;
+}
+
 .left ul li {
+    margin-left: 15px;
     cursor: pointer;
     width: 120px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     text-align: center;
     height: 30px;
-    margin-left: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.55);
 }
 
 .right {
-    padding: 12px 0;
+    padding: 7px 0;
     width: 40%;
     height: 100%;
 }
 
+.right ul {
+    justify-content: right;
+}
+
 .right ul li {
+    margin-right: 15px;
     cursor: pointer;
     width: 120px;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    text-align: center;
     height: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.55);
 }
 
 .nav {
-    padding: 0 45px;
+    padding: 0 20px;
     top: 40%;
     position: relative;
     display: flex;
