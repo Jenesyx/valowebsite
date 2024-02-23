@@ -21,7 +21,7 @@ import Image7 from '../../Images/Image7.png'
 function Header() {
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 1000,
         slidesToShow: 1,

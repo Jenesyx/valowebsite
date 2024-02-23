@@ -1,0 +1,87 @@
+section {
+    /* background-color: red; */
+    position: relative;
+    margin-top: 350px;
+}
+
+
+/* Valorant Section */
+.valo-section {
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+}
+
+.valo-section p span {
+    color: #C14444;
+}
+
+.left-valo {
+    width: 32%;
+    text-align: left;
+}
+
+.left-valo p:nth-child(1) {
+    margin-top: 0;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.left-valo p:nth-child(2) {
+    margin-top: 60px;
+    width: 80%;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.right-valo {
+    width: 68%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.both-valo {
+    position: relative;
+    width: 365px;
+    height: 420px;
+    border-radius: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    box-shadow: 5px 5px 25px 1px rgba(0,0,0,0.5),
+    3px 3px 10px 1px rgba(0,0,0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+.both-valo:hover {
+    cursor: pointer;
+    border-radius: 35px;
+    box-shadow: 20px 20px 1px 2px rgba(0,0,0,0.45),
+    10px 10px 1px 1px rgba(0,0,0, 0.55);
+}
+
+.both-valo p {
+    position: absolute;
+    bottom: 20px;
+    left: 45px;
+    font-size: 30px;
+    text-align: left;
+    font-weight: 800;
+    line-height: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.both-valo:hover p {
+    bottom: 30px;
+    left: 55px;
+}
+
+.boosting {
+    background-image: url(../../Images/Jett.png);
+}
+
+.accounts {
+
+    background-image: url(../../Images/Phoenix.png);
+}
