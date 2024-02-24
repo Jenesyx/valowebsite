@@ -1,0 +1,10 @@
+.adver {
+    width: 33.3%;
+}
+
+.adver p {
+    font-size: 18px;
+    line-height: 21px;
+    width: 80%;
+    margin: 20px auto;
+}

@@ -82,6 +82,11 @@ section {
 }
 
 .accounts {
-
     background-image: url(../../Images/Phoenix.png);
+}
+
+.advertise-section {
+    justify-content: space-between;
+    display: flex;
+    position: relative;
 }

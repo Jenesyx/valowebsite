@@ -1,17 +1,13 @@
 import React from 'react'
+import './SelfAdvertise.css'
 
 function SelfAdvertise(props) {
   return (
     <div className="adver">
-        <div className="thubm">
-            <p>{props.Title1}<br />{props.Title2}</p>
-            <div className='thumb-img'>
-                <img src={props.Image} alt="" />
-            </div>
-        </div>
-        <div>
-            <p>{props.text}</p>
-        </div>
+      <div className="thubm">
+          <img src={props.Icon} alt="Advertise-Icon" />
+      </div>
+      <p>{props.Text}</p>
     </div>
   )
 }
