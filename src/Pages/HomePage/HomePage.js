@@ -33,10 +33,10 @@ function HomePage() {
                 <SelfAdvertise Icon={Fast} Text="Lorem ipsum dolor sit amet consectetur. Quam in neque sagittis consequat. Diam enim cursus magna ac nisl amet purus enim ac. Viverra risus gravida interdum quis risus feugiat molestie ac viverra. Tristique sit lectus amet volutpat nisi porttitor pellentesque."/>
             </section>
             <section className='mentor-section'>
-                <p className='mentor--title'><span>////</span>  Improve your <span>skills</span></p>
+                <p className='mentor--title'><span>////</span> &nbsp;&nbsp;Improve your <span>skills</span></p>
                 <p className='mentor--text'>Embarking on the journey of becoming a better Valorant player is a dynamic and rewarding experience, and mentorship is the key to unlocking your full potential. A mentor serves as a guiding force, offering personalized insights and constructive feedback to elevate your game skills. Through mentorship, players gain the knowledge and expertise needed to refine their aim, master strategic movements, and optimize decision-making. The mentor-player relationship fosters an environment where mistakes become valuable lessons, and victories are celebrated together.</p>
                 <div className="book-mentor">
-                    <div className="mentor-left">
+                    <div className="mentor-left child">
                         <ul>
                             <li><img src={Polygon} alt="Polygon-Icon" />Precision Aiming & Crosshair Placement</li>
                             <li><img src={Polygon} alt="Polygon-Icon" />Advantageous Positioning</li>
@@ -45,7 +45,7 @@ function HomePage() {
                             <li><img src={Polygon} alt="Polygon-Icon" />Mindset and Mental Toughness</li>
                         </ul>
                     </div>
-                    <div className="mentor-right">
+                    <div className="mentor-right child">
                         <div className="mentor-btn">Book Now!</div>
                     </div>
                 </div>

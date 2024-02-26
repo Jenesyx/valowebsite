@@ -85,8 +85,74 @@ section {
     background-image: url(../../Images/Phoenix.png);
 }
 
+/* Advertise Section */
 .advertise-section {
     justify-content: space-between;
     display: flex;
     position: relative;
+}
+
+/* Mentoring Section */
+.mentor-section {
+    text-align: left;
+}
+
+.mentor--title {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.mentor--title span:nth-child(1) {
+    color: #C14444;
+}
+
+.mentor--title span:nth-child(2) {
+    color: #00A560;
+}
+
+.mentor--text {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 50px;
+}
+
+.book-mentor {
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+}
+
+.child {
+    flex: 1;
+}
+
+.mentor-left li {
+    font-size: 19px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.mentor-left li img {
+    padding-right: 15px;
+    filter: drop-shadow(0 0 3px rgba(0, 255, 149, 0.552)) drop-shadow(0 0 5px rgba(0, 255, 149, 0.455)) drop-shadow(0 0 10px rgba(0, 255, 149, 0.355)) drop-shadow(0 0 20px rgba(0, 255, 149, 0.455));
+}
+
+.mentor-right {
+    position: relative;
+}
+
+.mentor-btn {
+    cursor: pointer;
+    width: 180px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
 }
