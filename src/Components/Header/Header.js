@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -18,7 +19,13 @@ import Image5 from '../../Images/Image5.png'
 import Image6 from '../../Images/Image6.png'
 import Image7 from '../../Images/Image7.png'
 
-function Header() {
+function Header({showSlider = true}) {
+
+    const navigate = useNavigate();
+
+    const toHome = () => {
+        navigate('/')
+    }
 
     const settings = {
         dots: false,
@@ -36,7 +43,7 @@ function Header() {
                 <header className='header'>
                     <div className="left">
                         <ul>
-                            <li><img src={Home} alt="Home-icon" />Home</li>
+                            <li><img src={Home} alt="Home-icon" onClick={toHome}/>Home</li>
                             <li><img src={Valorant} alt="Valorant-icon" />Valorant</li>
                             <li><img src={AboutUs} alt="Aboutus-icon" />About us</li>
                             <li><img src={Mentoring} alt="Mentoring-icon" />Mentoring</li>
@@ -49,47 +56,51 @@ function Header() {
                         </ul>
                     </div>
                 </header>
-                <div className="slider">
-                <Slider {...settings}>
-                    <div>
-                        <img src={Image1} alt="Slide 1" />
-                    </div>
-                    <div>
-                        <img src={Image2} alt="Slide 2" />
-                    </div>
-                    <div>
-                        <img src={Image4} alt="Slide 4" />
-                    </div>
-                    <div>
-                        <img src={Image5} alt="Slide 5" />
-                    </div>
-                    <div>
-                        <img src={Image6} alt="Slide 6" />
-                    </div>
-                    <div>
-                        <img src={Image7} alt="Slide 7" />
-                    </div>
-                </Slider>
-                </div>
-                <div className="nav">
-                    <div className="nav-left">
-                        <p>It's <span>Time</span><br/>to change!</p>
-                    </div>
-                    <div className="nav-right">
-                        <div className="discord">
-                            <div className="nav-image">
-                                <img src={discord} alt="discord-icon" />
-                            </div>
-                            <p>Discord</p>
+                {showSlider && (
+                    <div className="slider">
+                    <Slider {...settings}>
+                        <div>
+                            <img src={Image1} alt="Slide 1" />
                         </div>
-                        <div className="tiktok">
-                            <div className="nav-image">
-                                <img src={tiktok} alt="tiktok-icon" />
+                        <div>
+                            <img src={Image2} alt="Slide 2" />
+                        </div>
+                        <div>
+                            <img src={Image4} alt="Slide 4" />
+                        </div>
+                        <div>
+                            <img src={Image5} alt="Slide 5" />
+                        </div>
+                        <div>
+                            <img src={Image6} alt="Slide 6" />
+                        </div>
+                        <div>
+                            <img src={Image7} alt="Slide 7" />
+                        </div>
+                    </Slider>
+                    </div>
+                )}
+                {showSlider && (
+                    <div className="nav">
+                        <div className="nav-left">
+                            <p>It's <span>Time</span><br/>to change!</p>
+                        </div>
+                        <div className="nav-right">
+                            <div className="discord">
+                                <div className="nav-image">
+                                    <img src={discord} alt="discord-icon" />
+                                </div>
+                                <p>Discord</p>
                             </div>
-                            <p>TikTok</p>
+                            <div className="tiktok">
+                                <div className="nav-image">
+                                    <img src={tiktok} alt="tiktok-icon" />
+                                </div>
+                                <p>TikTok</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                )}
             </nav>
         </>
     )
