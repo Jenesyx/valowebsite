@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './HomePage.css'
 import Header from '../../Components/Header/Header'
 import SelfAdvertise from '../../Components/SelfAdvertise/SelfAdvertise'
@@ -47,6 +47,16 @@ function HomePage() {
                     </div>
                     <div className="mentor-right child">
                         <div className="mentor-btn">Book Now!</div>
+                    </div>
+                </div>
+            </section>
+            <section className='aboutus-section'>
+                <p className='aboutus--title'><span>////</span> &nbsp;&nbsp;About <span>us</span></p>
+                <div className="aboutus-text">
+                    <p>Lorem ipsum dolor sit amet consectetur. Orci sit dui consectetur mi facilisis sed ipsum semper. Dictum aenean egestas est tincidunt morbi pellentesque turpis sit magna. Quam proin sit purus elit et. Faucibus sapien convallis blandit eget amet sollicitudin morbi commodo. Dui sapien hac justo felis condimentum amet odio lectus. Tincidunt malesuada euismod lectus ornare quis nullam eget volutpat purus. Phasellus nulla sed quisque lobortis. Neque ut est odio velit urna risus quis.</p>
+                    <div className="aboutus-bold">
+                        <p>About</p>
+                        <p>US</p>
                     </div>
                 </div>
             </section>
