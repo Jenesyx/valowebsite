@@ -155,4 +155,117 @@ section {
     position: absolute;
     right: 20px;
     bottom: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.mentor-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.aboutus-section {
+    text-align: left;
+}
+
+.aboutus--title {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.aboutus--title span:nth-child(1) {
+    color: #C14444;
+}
+
+.aboutus--title span:nth-child(2) {
+    color: #72FEFF;
+}
+
+.aboutus-text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.aboutus-c-holder {
+    width: 50%;
+}
+
+.aboutus-c-holder p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.aboutus-bold {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    text-align: center;
+    align-items: center;
+}
+
+.aboutus-bold p {
+    margin: 0;
+}
+
+.aboutus-bold p:nth-child(1) {
+    font-size: 38px;
+    font-weight: 800;
+    text-shadow: 0px 0px 25px  rgba(255, 255, 255, 0.9);
+}
+
+.aboutus-bold p:nth-child(2) {
+    margin-top: 10px;
+    font-size: 82px;
+    font-weight: 800;
+    color: #C14444;
+}
+
+.stay-touch {
+    display: flex;
+    justify-content: center;
+}
+
+.touch-holder {
+    position: relative;
+}
+
+.touch-holder div p {
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.touch-holder div span {
+    color: #3B9E57;
+}
+
+.touch-holder input {
+    margin-top: 15px;
+    width: 650px;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(241, 241, 241, 0.12) 100%);
+    background: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(241, 241, 241, 0.12) 100%);
+    background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(241, 241, 241, 0.12) 100%);
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 7px );
+    border: 1px solid rgba( 255, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 0 0 0 25px;
+    color: #fff;
+    font-size: 16px;
+    font-style: italic;
+    box-shadow: inset;
+}
+
+.input-colors {
+    position: absolute;
+    width: 630px;
+    height: 10px;
+    background: #64E9FF;
+    background: linear-gradient(to right, #64E9FF 0%, #00FF48 50%, #103CE7 100%);
+    top: 64px;
+    left: 20px;
 }

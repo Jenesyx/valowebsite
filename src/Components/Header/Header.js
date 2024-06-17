@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
 import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -22,9 +23,14 @@ import Image7 from '../../Images/Image7.png'
 function Header({showSlider = true}) {
 
     const navigate = useNavigate();
+    const location = useLocation();
 
     const toHome = () => {
         navigate('/')
+    }
+
+    const toTerms = () => {
+        navigate('/terms')
     }
 
     const settings = {
@@ -37,22 +43,61 @@ function Header({showSlider = true}) {
         autoplaySpeed: 10000,
     };
 
+    const toValorant = () => {
+        if (location.pathname === '/') {
+            const valoSection = document.getElementById('valo-section');
+            if (valoSection) {
+                const yOffset = -160;
+                const y = valoSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        } else {
+        navigate('/');
+        }
+    }
+
+    const toMentoring = () => {
+        if (location.pathname === '/') {
+            const mentorSection = document.getElementById('mentor-section');
+            if (mentorSection) {
+                const yOffset = -250;
+                const y = mentorSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        } else {
+        navigate('/');
+        }
+    }
+
+    const toAbout = () => {
+        if (location.pathname === '/') {
+            const aboutSection = document.getElementById('aboutus-section');
+            if (aboutSection) {
+                const yOffset = -100;
+                const y = aboutSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        } else {
+        navigate('/');
+        }
+    }
+
     return (
         <>
             <nav>
                 <header className='header'>
                     <div className="left">
                         <ul>
-                            <li><img src={Home} alt="Home-icon" onClick={toHome}/>Home</li>
-                            <li><img src={Valorant} alt="Valorant-icon" />Valorant</li>
-                            <li><img src={AboutUs} alt="Aboutus-icon" />About us</li>
-                            <li><img src={Mentoring} alt="Mentoring-icon" />Mentoring</li>
-                            <li><img src={Terms} alt="Terms-icon" />Terms</li>
+                            <li onClick={toHome}><div><img src={Home} alt="Home-icon"/></div><p>Home</p></li>
+                            <li onClick={toValorant}><div><img src={Valorant} alt="Valorant-icon" /></div><p>Valorant</p></li>
+                            <li onClick={toMentoring}><div><img src={Mentoring} alt="Mentoring-icon" /></div><p>Mentoring</p></li>
+                            <li onClick={toAbout}><div><img src={AboutUs} alt="Aboutus-icon" /></div><p>About us</p></li>
+                            <li onClick={toTerms}><div><img src={Terms} alt="Terms-icon" /></div><p>Terms</p></li>
                         </ul>
                     </div>
                     <div className="right">
                         <ul>
-                            <li><img src={Signin} alt="Signin-icon" />Sign in/up</li>
+                            <li><div><img src={Signin} alt="Signin-icon" /></div><p>Sign in/up</p></li>
                         </ul>
                     </div>
                 </header>
