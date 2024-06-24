@@ -16,13 +16,13 @@ function Footer() {
                     <div><img src="" alt="" /></div>
                 </div>
                 <div className="right-footer">
-                    <div className="zeropoint">
+                    <div className="zeropoint f-list">
                         <p>Zeropoint</p>
-                        <ul>
-                        
+                        <ul>    
+                            <li>About us</li>
                         </ul>
                     </div>
-                    <div className="resources">
+                    <div className="resources f-list">
                         <p>Resources</p>
                         <ul>
                             <li>Terms & Conditions</li>
@@ -30,14 +30,14 @@ function Footer() {
                             <li>Refund Policy</li>
                         </ul>
                     </div>
-                    <div className="help">
+                    <div className="help f-list">
                         <p>Help</p>
                         <ul>
                             <li>Contact us</li>
                             <li>FAQ's</li>
                         </ul>
                     </div>
-                    <div className="resources">
+                    <div className="resources f-list">
                         <p>Community</p>
                         <ul>
                             <li>Discord</li>

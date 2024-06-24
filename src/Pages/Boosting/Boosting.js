@@ -14,17 +14,22 @@ function Boosting() {
     const [desiredStage, setDesiredStage] = useState(rankData.ranks[0].stages[0]);
     const [desiredRR, setDesiredRR] = useState(rankData.ranks[0].stages[0].rr[0]);
     const [totalPrice, setTotalPrice] = useState(0);
+    const [totalPriceOff, setTotalPriceOff] = useState(0);
+    const [playWithYou, setPlayWithYou] = useState(false)
+    const [stream, setStream] = useState(false)
+    const [playPrice, setPlayPrice] = useState(0)
+    const [streamPrice, setStreamPrice] = useState(0)
 
     function calculatePrice() {
         try {
             const rankPrices = {
                 Bronze: { basePrice: 5, rrIncrement: [1] },
                 Silver: { basePrice: 10, rrIncrement: [2] },
-                Gold: { basePrice: 20, rrIncrement: [4] },
-                Platinum: { basePrice: 40, rrIncrement: [8] },
-                Diamond: { basePrice: 80, rrIncrement: [16, 18, 20] },
-                Ascendant: { basePrice: 50, rrIncrement: [20, 25, 30] },
-                Immortal: { basePrice: 100, rrIncrement: [20, 25, 30, 35] }
+                Gold: { basePrice: 15, rrIncrement: [4] },
+                Platinum: { basePrice: 20, rrIncrement: [6] },
+                Diamond: { basePrice: 30, rrIncrement: [10, 12, 14] },
+                Ascendant: { basePrice: 40, rrIncrement: [15, 20, 25] },
+                Immortal: { basePrice: 45, rrIncrement: [15, 20, 25, 30] }
             };
     
             const currentIdx = rankData.ranks.findIndex(rank => rank.name === currentRank.name);
@@ -65,12 +70,36 @@ function Boosting() {
         }
     }
     
-    
+
+    const handlePlayWU = () => {
+        setPlayWithYou(!playWithYou)
+    }
+
+    const handleStream = () => {
+        setStream(!stream)
+    }
 
     useEffect(() => {
-        const price = calculatePrice();
-        setTotalPrice(price);
-    }, [currentRank, desiredRank, currentStage, desiredStage, currentRR, desiredRR]);
+        const basePrice = calculatePrice();
+        let additionalCosts = 0;
+
+        if(basePrice > 1){
+            if (playWithYou) {
+                additionalCosts += 10;
+            }
+            if (stream) {
+                additionalCosts += 5;
+            }
+        }
+    
+        const totalPriceIncludingExtras = basePrice + additionalCosts;
+    
+        const finalPrice = totalPriceIncludingExtras * 1.2; 
+        const formattedFinalPrice = finalPrice.toFixed(1); 
+    
+        setTotalPrice(totalPriceIncludingExtras);
+        setTotalPriceOff(formattedFinalPrice);
+    }, [currentRank, desiredRank, currentStage, desiredStage, currentRR, desiredRR, playWithYou, stream]);
     
 
     const handleCurrentRankChange = (event) => {
@@ -187,14 +216,14 @@ function Boosting() {
             </div>
             <div className="checkout">
                 <div className="extra-features">
-                    <div className="play-with"><p>Play with you</p></div>
-                    <div className="stream"><p>Stream</p></div>
+                    <div className={`playwithyou ${playWithYou ? 'active' : ''}`} onClick={handlePlayWU}><p>Play with you</p></div>
+                    <div className={`stream ${stream ? 'active' : ''}`} onClick={handleStream}><p>Stream</p></div>
                 </div>
                 <div className="pay-coupon">
                     <p className='checkout-title'>Total Amount</p>
                     <div className="total-amount">
                         <p className='sub-total'>{totalPrice}$</p>
-                        <p className='without-discount'>320$</p>
+                        <p className='without-discount'>{totalPriceOff}$</p>
                     </div>
                     <div className="coupon">
                         <input type="text" />
